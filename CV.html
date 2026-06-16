@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisbullah Rafi | CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600&amp;display=swap');
+        
+        :root {
+            --primary: 234 179 8;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1e2937 0%, #334155 100%);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: rgb(234 179 8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, rgb(234 179 8), transparent);
+            bottom: -6px;
+            left: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, rgb(234 179 8), #64748b);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 9px;
+            width: 14px;
+            height: 14px;
+            background-color: rgb(234 179 8);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(234, 179, 8, 0.3);
+            z-index: 10;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(to right, rgb(234 179 8), #facc15);
+            border-radius: 9999px;
+            transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        .profile-img {
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 0 0 12px rgba(234, 179, 8, 0.2);
+        }
+
+        .download-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-btn:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 400%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.4),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(400%);
+            }
+        }
+
+        .active-nav {
+            color: rgb(234 179 8);
+            border-bottom: 3px solid rgb(234 179 8);
+        }
+
+        .language-flag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: #f1f5f9;
+            border-radius: 9999px;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-950 text-slate-200">
+    <!-- NAVBAR -->
+    <nav class="bg-zinc-950 border-b border-zinc-800 fixed w-full z-50">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-yellow-400 flex items-center justify-center rounded-2xl shadow-inner">
+                        <span class="text-zinc-950 font-bold text-3xl leading-none mt-0.5">HR</span>
+                    </div>
+                    <div>
+                        <span class="heading-font text-2xl font-semibold tracking-tighter text-white">Hisbullah Rafi</span>
+                    </div>
+                </div>
+                
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#tentang" onclick="navigateTo('tentang')" class="nav-link text-slate-300 hover:text-yellow-300 px-4 py-2 active-nav" id="nav-tentang">TENTANG</a>
+                    <a href="#pendidikan" onclick="navigateTo('pendidikan')" class="nav-link text-slate-300 hover:text-yellow-300 px-4 py-2" id="nav-pendidikan">PENDIDIKAN</a>
+                    <a href="#pengalaman" onclick="navigateTo('pengalaman')" class="nav-link text-slate-300 hover:text-yellow-300 px-4 py-2" id="nav-pengalaman">PENGALAMAN</a>
+                    <a href="#keahlian" onclick="navigateTo('keahlian')" class="nav-link text-slate-300 hover:text-yellow-300 px-4 py-2" id="nav-keahlian">KEAHLIAN</a>
+                    <a href="#bahasa" onclick="navigateTo('bahasa')" class="nav-link text-slate-300 hover:text-yellow-300 px-4 py-2" id="nav-bahasa">BAHASA</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <button onclick="downloadCV()" 
+                            class="download-btn flex items-center gap-x-2 bg-yellow-400 hover:bg-amber-300 transition-colors text-zinc-950 px-6 py-2.5 rounded-3xl font-semibold text-sm shadow-lg shadow-yellow-500/30">
+                        <i class="fa-solid fa-download"></i>
+                        <span>DOWNLOAD CV</span>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button onclick="toggleMobileMenu()" 
+                            class="md:hidden w-10 h-10 flex items-center justify-center text-2xl text-slate-400 hover:text-white transition-colors">
+                        <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-4 px-6">
+            <div class="flex flex-col gap-y-4 text-sm">
+                <a href="#tentang" onclick="navigateTo('tentang');toggleMobileMenu()" class="py-3 px-4 hover:bg-zinc-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-user w-5"></i>
+                    <span>Tentang Saya</span>
+                </a>
+                <a href="#pendidikan" onclick="navigateTo('pendidikan');toggleMobileMenu()" class="py-3 px-4 hover:bg-zinc-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap w-5"></i>
+                    <span>Pendidikan</span>
+                </a>
+                <a href="#pengalaman" onclick="navigateTo('pengalaman');toggleMobileMenu()" class="py-3 px-4 hover:bg-zinc-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-briefcase w-5"></i>
+                    <span>Pengalaman Kerja</span>
+                </a>
+                <a href="#keahlian" onclick="navigateTo('keahlian');toggleMobileMenu()" class="py-3 px-4 hover:bg-zinc-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb w-5"></i>
+                    <span>Keahlian</span>
+                </a>
+                <a href="#bahasa" onclick="navigateTo('bahasa');toggleMobileMenu()" class="py-3 px-4 hover:bg-zinc-800 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-language w-5"></i>
+                    <span>Bahasa</span>
+                </a>
+                
+                <div class="pt-6 border-t border-zinc-700">
+                    <button onclick="downloadCV();toggleMobileMenu()" 
+                            class="w-full flex items-center justify-center gap-x-3 bg-yellow-400 text-zinc-950 py-4 rounded-3xl font-semibold">
+                        <i class="fa-solid fa-download"></i>
+                        <span>DOWNLOAD PDF CV</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-12 items-center h-full">
+            <!-- Left content -->
+            <div class="md:col-span-7 pt-12 md:pt-0">
+                <div class="max-w-xl">
+                    <div class="inline-flex items-center gap-x-2 bg-white/10 text-yellow-300 text-xs font-medium tracking-[1px] px-5 h-7 rounded-3xl mb-6">
+                        <div class="w-2 h-2 bg-yellow-400 animate-pulse rounded-full"></div>
+                        TERSEDIA UNTUK PELUANG BARU
+                    </div>
+                    
+                    <h1 class="heading-font text-6xl md:text-7xl font-semibold leading-none text-white tracking-tighter mb-3">
+                        Hisbullah Rafi Dzaky
+                    </h1>
+                    <h2 class="text-3xl text-yellow-300 font-light mb-8">Frontend Developer &amp; UI Designer</h2>
+                    
+                    <p class="text-lg text-slate-400 max-w-md mb-10">
+                        Passionate developer dengan 4+ tahun pengalaman menciptakan pengalaman digital yang indah, intuitif, dan berkinerja tinggi.
+                    </p>
+                    
+                    <div class="flex items-center gap-x-4">
+                        <a href="#tentang" 
+                           onclick="navigateTo('tentang')"
+                           class="px-8 py-4 bg-white text-zinc-900 hover:bg-amber-200 transition-all rounded-3xl font-semibold flex items-center gap-x-2 group">
+                            LIHAT PROFIL SAYA
+                            <i class="fa-solid fa-arrow-right transition-transform group-active:translate-x-1"></i>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/hisbullah-rafi-72350a288" target="_blank"
+                           class="w-12 h-12 border border-slate-400 hover:border-yellow-300 flex items-center justify-center rounded-3xl transition-colors">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/Hisbuljr" target="_blank"
+                           class="w-12 h-12 border border-slate-400 hover:border-yellow-300 flex items-center justify-center rounded-3xl transition-colors">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-16 flex items-center gap-x-8 text-xs">
+                        <div class="flex items-center gap-x-5">
+                            <div class="text-emerald-400">
+                                <i class="fa-solid fa-check-circle text-3xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-mono text-[10px] tracking-widest text-slate-500">BASED IN</div>
+                                <div class="font-semibold">Surabaya, Indonesia</div>
+                            </div>
+                        </div>
+                        
+                        <div class="h-9 w-px bg-slate-700"></div>
+                        
+                        <div>
+                            <div class="flex -space-x-4">
+                                <div class="w-6 h-6 bg-blue-500 rounded-2xl flex items-center justify-center text-[10px] ring-2 ring-zinc-900">🇮🇩</div>
+                                <div class="w-6 h-6 bg-red-500 rounded-2xl flex items-center justify-center text-[10px] ring-2 ring-zinc-900">🇬🇧</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right visual -->
+            <div class="md:col-span-5 flex justify-center md:justify-end">
+                <div class="relative">
+                    <!-- Main image -->
+                    <div class="w-72 h-72 md:w-80 md:h-80 bg-zinc-800 rounded-[4rem] overflow-hidden border-8 border-yellow-400 shadow-2xl profile-img">
+                        <img src="WhatsApp Image 2025-09-23 at 14.01.58_185b7b68.jpg" 
+                             alt="Hisbullah Rafi Dzaky"
+                             class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Floating badge 1 -->
+                    <div class="absolute -top-4 -left-6 bg-zinc-900 border border-yellow-400 text-yellow-300 text-xs px-5 py-2.5 rounded-3xl flex items-center gap-x-2 shadow-xl">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="font-semibold">4.9/5</span>
+                    </div>
+                    
+                    <!-- Floating badge 2 -->
+                    <div onclick="window.scrollTo({top: document.getElementById('keahlian').offsetTop - 80, behavior: 'smooth'})"
+                         class="cursor-pointer absolute bottom-12 -right-6 bg-zinc-900 text-white text-sm font-medium px-6 py-4 rounded-3xl shadow-2xl flex items-center gap-x-3 hover:scale-105 transition-transform">
+                        <div class="text-amber-300">
+                            <i class="fa-solid fa-code text-2xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-[10px] text-slate-400 tracking-wider">Prodi</div>
+                            <div class="font-semibold">Rekayasa Kecerdasan Artifisial</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative ring -->
+                    <div class="absolute -inset-8 border border-dashed border-yellow-400/30 rounded-[5rem] rotate-12"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-y-1 text-[10px] font-mono tracking-widest text-slate-400">
+            <div class="animate-bounce">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <span>SCROLL</span>
+        </div>
+        
+        <!-- Status bar -->
+        <div class="absolute bottom-8 right-8 bg-zinc-900/80 backdrop-blur-md text-xs px-4 h-6 rounded-3xl flex items-center gap-x-2 border border-yellow-400/30">
+            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+            <span class="text-emerald-400 font-medium">OPEN TO WORK</span>
+        </div>
+    </header>
+
+    <!-- TENTANG / RINGKASAN -->
+    <section id="tentang" class="py-24 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Left sidebar -->
+                <div class="lg:col-span-4">
+                    <div class="sticky top-28">
+                        <div class="flex items-center gap-x-3 mb-4">
+                            <div class="h-px w-10 bg-yellow-400"></div>
+                            <span class="uppercase text-xs font-semibold tracking-widest text-yellow-500">Ringkasan</span>
+                        </div>
+                        <h2 class="heading-font text-5xl font-semibold tracking-tight leading-none mb-6">Siapa saya?</h2>
+                        
+                        <div class="text-slate-500 text-[15px] leading-relaxed">
+                            Saya adalah Mahasiswa Teknik Rekayasa Kecerdasan Artifisial di Institut Teknologi Sepuluh Nopember (ITS) yang mempelajari di antaranya Machine Learning, Data Science, dan Computer Vision. Tertarik pada implementasi AI dan Citra Digital.
+                        </div>
+                        
+                        <div class="mt-12 pt-8 border-t border-slate-200">
+                            <div class="flex items-center justify-between text-sm">
+                                <div class="flex items-center gap-x-2">
+                                    <i class="fa-solid fa-calendar text-yellow-400"></i>
+                                    <span class="font-medium">Usia</span>
+                                </div>
+                                <div class="font-mono text-slate-400">20</div>
+                            </div>
+                            <div class="flex items-center justify-between text-sm mt-6">
+                                <div class="flex items-center gap-x-2">
+                                    <i class="fa-solid fa-map-marker-alt text-yellow-400"></i>
+                                    <span class="font-medium">Lokasi</span>
+                                </div>
+                                <div class="font-medium">Sidoarjo</div>
+                            </div>
+                            <div class="flex items-center justify-between text-sm mt-6">
+                                <div class="flex items-center gap-x-2">
+                                    <i class="fa-solid fa-envelope text-yellow-400"></i>
+                                    <span class="font-medium">Email</span>
+                                </div>
+                                <a href="mail:hisbullahrafi9@gmail.com" class="text-blue-600 hover:underline">hisbullahrafi9@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Social icons -->
+                        <div class="flex gap-x-6 mt-16">
+                            <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fa-brands fa-behance"></i></a>
+                            <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main content -->
+                <div class="lg:col-span-8">
+                    <div class="prose prose-slate max-w-none text-lg leading-relaxed">
+                        <p class="text-xl text-slate-600">
+                            Halo! Saya Hisbullah Rafi, seorang Mahasiswa RKA berbasis di Surabaya. 
+                            Dengan lebih dari 2 tahun pengalaman dalam teknologi, saya telah membantu berbagai perusahaan 
+                            dan startup.
+                        </p>
+                        
+                        <p class="mt-6">
+                            Saya sangat menyukai React, Tailwind, dan segala hal yang berkaitan dengan frontend development. 
+                            Saat ini saya bekerja sebagai Frontend Lead di sebuah Company, di mana saya memimpin tim 
+                            untuk mengembangkan aplikasi mobile dan web mental health yang digunakan oleh lebih dari 80.000 pengguna.
+                        </p>
+                        
+                        <div class="my-12 bg-slate-100 border border-slate-200 rounded-3xl p-8 flex flex-col md:flex-row gap-8">
+                            <div class="flex-1">
+                                <div class="uppercase text-xs font-semibold mb-2 text-yellow-500">Saat ini</div>
+                                <div class="font-semibold text-2xl">Frontend Lead @ mybestieindonesia</div>
+                                <div class="text-slate-500 text-sm mt-1">Januari 2026 - Sekarang</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="uppercase text-xs font-semibold mb-3 text-slate-400">Minat saya</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-white shadow px-4 py-2 rounded-3xl">Design Systems</span>
+                                    <span class="text-xs bg-white shadow px-4 py-2 rounded-3xl">3D on Web</span>
+                                    <span class="text-xs bg-white shadow px-4 py-2 rounded-3xl">AI Interfaces</span>
+                                    <span class="text-xs bg-white shadow px-4 py-2 rounded-3xl">Motion Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Selain coding, saya juga aktif dalam komunitas developer Indonesia. Saya sering berbicara di meetup lokal, 
+                            menulis artikel teknis, dan berkontribusi pada proyek open source. Saya selalu mencari kesempatan untuk 
+                            belajar hal baru dan berkolaborasi dengan orang-orang yang visioner.
+                        </p>
+                    </div>
+                    
+                    <!-- Quick facts -->
+                    <div class="mt-16 grid grid-cols-3 gap-6">
+                        <div class="bg-zinc-100 rounded-3xl p-6 text-center card-hover">
+                            <div class="text-4xl font-mono font-semibold text-yellow-400 mb-1">8</div>
+                            <div class="text-xs tracking-widest font-medium">PROYEK SELESAI</div>
+                        </div>
+                        <div class="bg-zinc-100 rounded-3xl p-6 text-center card-hover">
+                            <div class="text-4xl font-mono font-semibold text-yellow-400 mb-1">26</div>
+                            <div class="text-xs tracking-widest font-medium">KLIEN PUAS</div>
+                        </div>
+                        <div class="bg-zinc-100 rounded-3xl p-6 text-center card-hover">
+                            <div class="text-4xl font-mono font-semibold text-yellow-400 mb-1">3</div>
+                            <div class="text-xs tracking-widest font-medium">Bulan EXP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section id="pendidikan" class="py-24 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-baseline mb-12">
+                <div>
+                    <span class="px-4 py-1 text-xs rounded-3xl bg-yellow-400 text-zinc-900 font-bold">EDUCATION</span>
+                    <h2 class="heading-font text-5xl text-white font-semibold tracking-tighter mt-3">Pendidikan</h2>
+                </div>
+                <a onclick="navigateTo('pengalaman')" 
+                   class="hidden md:flex items-center text-sm gap-x-2 text-slate-400 hover:text-yellow-300 cursor-pointer">
+                    LIHAT PENGALAMAN
+                    <span class="block h-px w-12 bg-slate-400"></span>
+                </a>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Education item 1 -->
+                <div class="timeline-item grid grid-cols-12 gap-x-8">
+                    <div class="col-span-12 md:col-span-3">
+                        <div class="bg-zinc-900 rounded-3xl p-5 text-center">
+                            <div class="text-yellow-300 text-xs font-medium tracking-wider">2023 — 2027</div>
+                            <div class="h-px bg-slate-700 my-5"></div>
+                            <div class="font-semibold text-white">S1 Teknik Informatika</div>
+                            <div class="text-emerald-300 text-sm mt-1">IPK 3.00 / 4.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-span-12 md:col-span-9 relative">
+                        <div class="timeline-dot"></div>
+                        
+                        <div class="ml-8 md:ml-12 bg-zinc-900 rounded-3xl p-8 card-hover">
+                            <div class="flex flex-col md:flex-row justify-between gap-y-4">
+                                <div>
+                                    <div class="font-semibold text-2xl text-white">Institut Teknologi Sepuluh Nopember</div>
+                                    <div class="text-slate-400">Surabaya, Jawa Timur</div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block bg-teal-900 text-teal-300 text-xs font-medium px-5 py-2 rounded-3xl">Mahasiswa</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 text-slate-400 text-sm">
+                                Mata Kuliah Terkait: Machine Learning, Deep Learning, NLP, Computer Vision
+                            </div>
+                            
+                            <div class="mt-8 flex flex-wrap gap-2">
+                                <span class="px-4 py-1 text-xs bg-zinc-800 rounded-3xl text-slate-400">React</span>
+                                <span class="px-4 py-1 text-xs bg-zinc-800 rounded-3xl text-slate-400">Node.js</span>
+                                <span class="px-4 py-1 text-xs bg-zinc-800 rounded-3xl text-slate-400">UI/UX Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education item 2 -->
+                <div class="timeline-item grid grid-cols-12 gap-x-8">
+                    <div class="col-span-12 md:col-span-3">
+                        <div class="bg-zinc-900 rounded-3xl p-5 text-center">
+                            <div class="text-yellow-300 text-xs font-medium tracking-wider">2020 — 2023</div>
+                            <div class="h-px bg-slate-700 my-5"></div>
+                            <div class="font-semibold text-white">SMA Negeri 3 Sidoarjo</div>
+                            <div class="text-emerald-300 text-sm mt-1">Nilai rata-rata 94.0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-span-12 md:col-span-9 relative">
+                        <div class="timeline-dot"></div>
+                        
+                        <div class="ml-8 md:ml-12 bg-zinc-900 rounded-3xl p-8 card-hover">
+                            <div class="flex justify-between">
+                                <div>
+                                    <div class="font-semibold text-white">SMA Negeri 3 Sidoarjo</div>
+                                    <div class="text-slate-400 text-sm">Jurusan IPS</div>
+                                </div>
+                            </div>
+                            
+                            <ul class="mt-8 space-y-4 text-sm text-slate-400 pl-5 border-l border-dashed border-slate-700">
+                                <li class="flex gap-x-3 items-start">
+                                    <span class="block w-2 h-2 mt-2 bg-yellow-400 rounded-full flex-shrink-0"></span>
+                                    Juara 1 Lomba 17 Agustus
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="pengalaman" class="py-24 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div class="max-w-xs">
+                    <span class="text-xs uppercase font-semibold bg-amber-200 text-amber-900 px-5 py-2 rounded-3xl">EXPERIENCE</span>
+                    <h2 class="heading-font text-5xl font-semibold tracking-tighter text-zinc-900 mt-4">Pengalaman Kerja</h2>
+                </div>
+                <div class="text-slate-400 text-sm max-w-[240px] hidden lg:block">
+                    Perjalanan karir saya yang penuh dengan proyek menarik dan tim hebat
+                </div>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Job 1 -->
+                <div class="bg-zinc-100 rounded-3xl p-8 grid grid-cols-12 gap-8 card-hover">
+                    <div class="col-span-12 lg:col-span-3">
+                        <div class="text-xs font-medium text-slate-500">JAN 2026 - SEKARANG</div>
+                        <div class="mt-6 flex items-center gap-x-3">
+                            <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold">P</div>
+                            <div>
+                                <div class="font-semibold">Hello Bestie</div>
+                                <div class="text-xs text-slate-400">Jakarta</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="flex items-center gap-x-4">
+                            <div class="text-3xl font-semibold">UI/UX</div>
+                            <div class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-3xl">PROMOSI</div>
+                        </div>
+                        <ul class="mt-8 space-y-6">
+                            <li class="flex gap-4">
+                                <span class="font-mono text-yellow-400 text-xl leading-none">01</span>
+                                <span class="text-slate-600">Memimpin tim pengembangan dashboard dan aplikasi mobile.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="font-mono text-yellow-400 text-xl leading-none">02</span>
+                                <span class="text-slate-600">Meningkatkan performa aplikasi hingga 60% dengan implementasi code.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="font-mono text-yellow-400 text-xl leading-none">03</span>
+                                <span class="text-slate-600">Membangun design yang menarik.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 flex items-end">
+                        <div class="text-xs leading-tight text-right w-full">
+                            <span class="block text-slate-400">TEKNOLOGI</span> 
+                            <span class="font-medium text-slate-700">Tailwind • Figma • Next.js</span>
+                        </div>
+                    </div>
+                </div>
+    
+    <!-- KEAHLIAN -->
+    <section id="keahlian" class="py-24 bg-zinc-950 text-slate-200">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-x-16">
+                <div class="md:col-span-5">
+                    <div class="max-w-xs">
+                        <span class="font-mono text-xs text-amber-400">STACK &amp; SKILLS</span>
+                        <h2 class="heading-font text-6xl font-semibold text-white tracking-tighter leading-none mt-4">Keahlian Teknis</h2>
+                        <p class="text-slate-400 mt-6">Berikut adalah teknologi dan tools yang saya kuasai dengan baik.</p>
+                        
+                        <div class="mt-20 hidden md:block">
+                            <div onclick="window.scrollTo({top: document.getElementById('bahasa').offsetTop - 100, behavior:'smooth'})" 
+                                 class="cursor-pointer inline-flex items-center gap-3 border border-slate-700 hover:border-yellow-400 px-6 py-6 rounded-3xl transition-colors group">
+                                <div class="text-5xl text-yellow-300 transition-transform group-hover:rotate-12">🌐</div>
+                                <div>
+                                    <div class="text-sm font-medium">Lihat juga kemampuan bahasa saya</div>
+                                    <div class="text-xs text-slate-400">→ Bahasa yang saya kuasai</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7 mt-12 md:mt-0">
+                    <div class="grid grid-cols-2 gap-8">
+                        <!-- Skill group 1 -->
+                        <div>
+                            <div class="uppercase text-xs text-slate-400 mb-6 flex items-center gap-2">
+                                <span class="flex-1 h-px bg-gradient-to-r from-transparent via-slate-400"></span>
+                                FRONTEND
+                                <span class="flex-1 h-px bg-gradient-to-l from-transparent via-slate-400"></span>
+                            </div>
+                            
+                            <div class="space-y-8">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-brands fa-react text-sky-400"></i>
+                                            <span>React / Next.js</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">45%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[45%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-brands fa-figma text-pink-400"></i>
+                                            <span>Figma &amp; Design</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">80%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[80%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-solid fa-wind text-teal-400"></i>
+                                            <span>Tailwind CSS</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">70%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[70%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill group 2 -->
+                        <div>
+                            <div class="uppercase text-xs text-slate-400 mb-6 flex items-center gap-2">
+                                <span class="flex-1 h-px bg-gradient-to-r from-transparent via-slate-400"></span>
+                                BACKEND &amp; LAINNYA
+                                <span class="flex-1 h-px bg-gradient-to-l from-transparent via-slate-400"></span>
+                            </div>
+                            
+                            <div class="space-y-8">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-solid fa-database"></i>
+                                            <span>Node.js / Express</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">82%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[82%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-solid fa-cube"></i>
+                                            <span>Three.js / WebGL</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">65%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[65%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between text-sm mb-3">
+                                        <div class="flex items-center gap-x-2">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <span>Python (Data)</span>
+                                        </div>
+                                        <span class="font-mono text-amber-300">75%</span>
+                                    </div>
+                                    <div class="h-2 bg-zinc-800 rounded-3xl overflow-hidden">
+                                        <div class="skill-bar w-[75%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="mt-16">
+                        <div class="text-xs font-medium text-slate-400 mb-4">TOOLS &amp; SOFTWARE</div>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-zinc-900 text-xs flex items-center gap-x-2 px-5 h-9 rounded-3xl">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="bg-zinc-900 text-xs flex items-center gap-x-2 px-5 h-9 rounded-3xl">
+                                <i class="fa-solid fa-terminal"></i>
+                                <span>VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAHASA -->
+    <section id="bahasa" class="py-24 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-2/5">
+                    <div class="inline-flex px-6 py-2 bg-yellow-200 text-yellow-800 font-semibold rounded-3xl text-sm mb-6">LANGUAGE PROFICIENCY</div>
+                    <h2 class="heading-font text-6xl font-semibold tracking-tighter">Bahasa yang saya kuasai</h2>
+                    <p class="mt-8 max-w-xs text-slate-600">
+                        Kemampuan komunikasi dalam berbagai bahasa membantu saya berkolaborasi dengan tim global dan klien internasional.
+                    </p>
+                    
+                    <div class="mt-16 bg-zinc-100 rounded-3xl p-8">
+                        <div class="flex gap-6 items-center">
+                            <div class="language-flag text-2xl">🇮🇩</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between text-xs mb-4">
+                                    <span class="font-semibold">Bahasa Indonesia</span>
+                                    <span class="font-mono text-emerald-500">Profesional</span>
+                                </div>
+                                <div class="h-1.5 bg-emerald-200 rounded-full">
+                                    <div class="h-1.5 w-full bg-emerald-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- English -->
+                    <div class="border border-slate-200 rounded-3xl p-7 hover:border-yellow-300 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-x-4">
+                                <div class="language-flag text-3xl">Eng</div>
+                                <div>
+                                    <div class="font-semibold text-xl">English</div>
+                                    <div class="text-xs text-slate-400">Professional Working</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-5xl font-light text-yellow-400 font-mono">C1</div>
+                                <div class="text-[10px] font-medium">CEFR</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 text-xs flex justify-between items-end">
+                            <div class="leading-tight">
+                                Membaca<br>
+                                <span class="font-semibold text-lg text-slate-700">Sempurna</span>
+                            </div>
+                            <div class="leading-tight text-right">
+                                Berbicara<br>
+                                <span class="font-semibold text-lg text-slate-700">Sempurna</span>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+    <!-- FOOTER / CTA -->
+    <footer class="bg-zinc-950 py-20 text-slate-300">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-y-8">
+                <div class="flex items-center gap-x-4">
+                    <div class="w-8 h-8 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-950 font-black text-4xl leading-none">HR</div>
+                    <div class="text-3xl heading-font font-semibold text-white tracking-tighter">Hisbullah Rafi</div>
+                </div>
+                
+                <div class="text-center md:text-right text-xs">
+                    <div class="font-medium">Terima kasih telah melihat CV saya.</div>
+                    <div class="text-slate-500">Mari berkolaborasi dan menciptakan sesuatu yang luar biasa bersama.</div>
+                    <a href="mailto:aditya.pratama@email.com" 
+                       class="inline-flex items-center gap-x-2 mt-8 text-yellow-300 hover:text-yellow-200 transition-colors text-sm font-medium">
+                        <span class="block w-6 h-px bg-current"></span>
+                        HUBUNGI SAYA
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
+                
+                <div class="text-[10px] font-mono text-slate-500 text-center md:text-right">
+                    © 2025 Hisbullah Rafi<br>
+                    MADE WITH TAILWIND + HEART
+                </div>
+            </div>
+            
+            <!-- Bottom line -->
+            <div class="mt-20 pt-8 border-t border-slate-800 text-center text-xs flex flex-col md:flex-row justify-between items-center gap-y-4">
+                <div class="flex items-center gap-x-5 text-xs">
+                    <a href="#" class="hover:text-white transition-colors">PRIVACY</a>
+                    <a href="#" class="hover:text-white transition-colors">LEGAL</a>
+                    <a href="#" class="hover:text-white transition-colors">SITEMAP</a>
+                </div>
+                
+                <div onclick="window.scrollTo(0,0)" 
+                     class="flex items-center gap-x-2 text-xs cursor-pointer hover:text-yellow-300 transition-colors">
+                    <span>KEMBALI KE ATAS</span> 
+                    <i class="fa-solid fa-arrow-turn-up"></i>
+                </div>
+                
+                <div class="text-slate-600">v24.3.1</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script run
+        function initializeTailwind() {
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+        
+        // Navigation helper
+        function navigateTo(section) {
+            // Remove all active states
+            const navLinks = document.querySelectorAll('.nav-link')
+            navLinks.forEach(link => link.classList.remove('active-nav'))
+            
+            // Add active class to current
+            const activeLink = document.getElementById(`nav-${section}`)
+            if (activeLink) activeLink.classList.add('active-nav')
+            
+            const element = document.getElementById(section)
+            if (element) {
+                const navHeight = 80
+                const elementPosition = element.getBoundingClientRect().top
+                const offsetPosition = elementPosition + window.scrollY - navHeight
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                })
+            }
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu')
+            const icon = document.getElementById('mobile-menu-icon')
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden')
+                icon.classList.remove('fa-bars')
+                icon.classList.add('fa-xmark')
+            } else {
+                mobileMenu.classList.add('hidden')
+                icon.classList.add('fa-bars')
+                icon.classList.remove('fa-xmark')
+            }
+        }
+        
+        function downloadCV() {
+            const btns = document.querySelectorAll('.download-btn')
+            
+            btns.forEach(btn => {
+                const originalText = btn.innerHTML
+                
+                btn.style.transitionDuration = '300ms'
+                btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                    </svg>
+                `
+                setTimeout(() => {
+                    const successHTML = `
+                        <i class="fa-solid fa-check text-emerald-500"></i>
+                        <span class="text-emerald-600">CV DOWNLOADED!</span>
+                    `
+                    btn.innerHTML = successHTML
+                    
+                    // Reset button after 2.5 seconds
+                    setTimeout(() => {
+                        btn.innerHTML = originalText
+                    }, 2500)
+                }, 1200)
+            })
+            
+            // Simulate file download
+            console.log('%cCV PDF would be downloaded here in production build', 'color:#eab308; font-family:monospace')
+            
+            // Show toast
+            showToast()
+        }
+        
+        function showToast() {
+            const toast = document.createElement('div')
+            toast.style.position = 'fixed'
+            toast.style.bottom = '30px'
+            toast.style.left = '50%'
+            toast.style.transform = 'translateX(-50%)'
+            toast.style.backgroundColor = '#111827'
+            toast.style.color = '#fde047'
+            toast.style.padding = '16px 24px'
+            toast.style.borderRadius = '9999px'
+            toast.style.boxShadow = '0 10px 15px -3px rgb(0 0 0)'
+            toast.style.display = 'flex'
+            toast.style.alignItems = 'center'
+            toast.style.gap = '12px'
+            toast.style.zIndex = '9999'
+            toast.style.whiteSpace = 'nowrap'
+            toast.style.fontSize = '14px'
+            toast.style.opacity = '0'
+            toast.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+            toast.innerHTML = `
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>CV telah diunduh. Terima kasih!</span>
+            `
+            document.body.appendChild(toast)
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.style.opacity = '1'
+                toast.style.transform = 'translateX(-50%) translateY(-10px)'
+            }, 10)
+            
+            setTimeout(() => {
+                toast.style.opacity = '0'
+                toast.style.transform = 'translateX(-50%)'
+                
+                setTimeout(() => {
+                    toast.remove()
+                }, 400)
+            }, 3200)
+        }
+        
+        // Animate skill bars when scrolled into view
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-bar')
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Reset width first
+                        skillBars.forEach(bar => {
+                            const currentWidth = bar.style.width
+                            bar.style.width = '0%'
+                            
+                            // Trigger reflow
+                            void bar.offsetWidth
+                            
+                            // Set back to intended width
+                            bar.style.width = currentWidth
+                        })
+                        
+                        observer.disconnect()
+                    }
+                })
+            }, {
+                threshold: 0.6
+            })
+            
+            const skillsSection = document.getElementById('keahlian')
+            if (skillsSection) observer.observe(skillsSection)
+        }
+        
+        // Keyboard shortcuts
+        function handleKeyboard(e) {
+            if (e.metaKey && e.key === "k") {
+                e.preventDefault()
+                const firstLink = document.getElementById('nav-tentang')
+                if (firstLink) firstLink.click()
+            }
+        }
+        
+        // Progress bar on scroll for header
+        function createScrollProgress() {
+            const progress = document.createElement('div')
+            progress.id = 'scroll-progress'
+            progress.style.position = 'fixed'
+            progress.style.top = '0'
+            progress.style.left = '0'
+            progress.style.height = '3px'
+            progress.style.background = 'linear-gradient(to right, rgb(234 179 8), rgb(245 158 11))'
+            progress.style.zIndex = '99999'
+            progress.style.width = '0%'
+            document.body.appendChild(progress)
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                const scrollPercent = scrollTop / docHeight * 100
+                progress.style.width = `${scrollPercent}%`
+            })
+        }
+        
+        // Initialize everything
+        function initialize() {
+            initializeTailwind()
+            
+            // Activate first nav
+            const firstNav = document.getElementById('nav-tentang')
+            if (firstNav) firstNav.classList.add('active-nav')
+            
+            // Animate skills on scroll
+            setTimeout(() => {
+                animateSkills()
+            }, 1400)
+            
+            // Create scroll progress bar
+            createScrollProgress()
+            
+            // Keyboard listener
+            document.addEventListener('keydown', handleKeyboard)
+            
+            // Click anywhere on mobile menu to close
+            const mobileMenu = document.getElementById('mobile-menu')
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target.tagName === "A") {
+                    setTimeout(() => {
+                        this.classList.add('hidden')
+                        const icon = document.getElementById('mobile-menu-icon')
+                        icon.classList.add('fa-bars')
+                        icon.classList.remove('fa-xmark')
+                    }, 300)
+                }
+            })
+            
+            // Make profile image more interactive
+            const profile = document.querySelector('.profile-img')
+            if (profile) {
+                profile.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect()
+                    const x = (e.clientX - rect.left) / rect.width
+                    const y = (e.clientY - rect.top) / rect.height
+                    
+                    this.style.transform = `perspective(800px) rotateX(${(y - 0.5) * -18}deg) rotateY(${(x - 0.5) * 22}deg)`
+                })
+                
+                profile.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1.08) rotate(3deg)'
+                })
+            }
+            
+            // Demo: change active nav link on scroll
+            window.addEventListener('scroll', () => {
+                const sections = ['tentang', 'pendidikan', 'pengalaman', 'keahlian', 'bahasa']
+                const navIds = ['nav-tentang', 'nav-pendidikan', 'nav-pengalaman', 'nav-keahlian', 'nav-bahasa']
+                
+                let current = ''
+                
+                sections.forEach((sectionId, index) => {
+                    const section = document.getElementById(sectionId)
+                    if (!section) return
+                    
+                    const sectionTop = section.offsetTop
+                    
+                    if (scrollY >= sectionTop - 300) {
+                        current = navIds[index]
+                    }
+                })
+                
+                navIds.forEach(navId => {
+                    const navEl = document.getElementById(navId)
+                    if (navEl) {
+                        if (navId === current) {
+                            navEl.classList.add('active-nav')
+                        } else {
+                            navEl.classList.remove('active-nav')
+                        }
+                    }
+                })
+            })
+            
+            console.log('%c✅ CV Website Aditya Pratama siap digunakan!', 'color:#facc15; font-family:monospace; font-size:13px')
+        }
+        
+        // Boot app
+        window.onload = initialize
+    </script>
+</body>
+</html>
